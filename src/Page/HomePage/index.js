@@ -7,22 +7,24 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
-        position:'relative'
+        position:'relative',
+        overflowX:"hidden"
     },
     imgShipper: {
         '&>img': {
             width: '100%'
         },
-        width: '50%'
+        width: '50%',
     },
     getStart: {
         width: '50%',
-        marginRight:'40px'
+        marginRight:'40px',
     },
     title: {
-        fontSize: 54,
+        fontSize: 44,
         fontFamily: 'Lato',
-        marginBottom:'20px'
+        marginBottom:'20px',
+        marginTop:"20px"
     },
     content: {
         fontSize: '16px',
@@ -48,7 +50,6 @@ const GetStartButton = withStyles((theme) => ({
         backgroundColor: theme.palette.green,
         transition: 'all 0.3s',
         '&:hover': {
-            marginBottom: 20,
             backgroundColor: theme.palette.green,
             opacity:"0.8",
         },
@@ -64,9 +65,13 @@ export default function HomePage() {
             <Container className={classes.root} fixed>
                 <div className={classes.getStart}>
                     <div className={classes.title}>Chúng Tôi Giao Hàng Nhanh Chóng Chỉ Với 30 phút</div>
-                    <div className={classes.content}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua adminim veniam quis nostrud exercitation</div>
+                    <div className={classes.content}>Chúng tôi là Deliverra là web cung cấp dịch vụ giao hàng trực tuyến cho khách hàng</div>
                     <div className={classes.action}>
                         <GetStartButton>Sử Dụng Dịch Vụ <NavigateNextIcon/> </GetStartButton>
+                    </div>
+                    <div className={classes.title}>Nếu Bạn Đang Cần Việc Làm ?</div>
+                    <div className={classes.action}>
+                        <GetStartButton>Trở Thành Đối Tác Với Chúng Tôi <NavigateNextIcon/> </GetStartButton>
                     </div>
                 </div>
                 <div className={classes.imgShipper}>
