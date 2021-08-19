@@ -1,6 +1,9 @@
 import {Switch, BrowserRouter} from 'react-router-dom';
 import HomeTemplate from './Container/HomeTemplate';
 import { routesHome } from './Router';
+
+import {Container} from "react-bootstrap";
+
 function App() {
   const showLayoutHome = (routes) => {
     if (routes && routes.length > 0) {
@@ -10,12 +13,16 @@ function App() {
     }
   }
   return (
-    <BrowserRouter>
-      <Switch>
-        {showLayoutHome(routesHome)}
-        {/* <Route path='/home' component={AboutPage} /> */}
-      </Switch>
-    </BrowserRouter>
+    <Container>
+      <BrowserRouter>
+        <Switch>
+          
+          {showLayoutHome(routesHome)}
+          {/* <Route path='/home' component={AboutPage} /> */}
+        </Switch>
+      </BrowserRouter>
+    </Container>
+    
   );
 }
 
