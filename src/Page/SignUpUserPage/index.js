@@ -41,7 +41,7 @@ export default function index() {
           className={classes.paper}
           // style={{ width: "50%", margin: "64px 80px" }}
         ></div>
-        <Typography className="h1">
+        {/* <Typography className="h1"> */}
           <h1
             style={{
               margin: "112px 112px",
@@ -51,7 +51,7 @@ export default function index() {
           >
             Kinh Doanh Trở Nên Dễ Dàng Với Deliverra, Nào Tham Gia Ngay Thôi!!
           </h1>
-        </Typography>
+        {/* </Typography> */}
 
         <form
           style={{
@@ -65,11 +65,11 @@ export default function index() {
             borderRadius: "30px",
           }}
         >
-          <Typography>
+          {/* <Typography> */}
             <h2 style={{ color: "#13a549", textAlign: "center", margin:"20px 20px" }}>
               Create Your Account
             </h2>
-          </Typography>
+          {/* </Typography> */}
           <Grid container spacing={1} style={{ padding: "4 4px" }}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -162,7 +162,7 @@ export default function index() {
               />
             </Grid>
 
-            <Grid item justifyContent="flex-end">
+            <Grid container justifyContent="flex-end">
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
                 label="Accept the cookies"

@@ -5,16 +5,16 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
-import { ClassSharp } from "@material-ui/icons";
+// import { ClassSharp } from "@material-ui/icons";
 import HomeIcon from "@material-ui/icons/Home";
-import Icon from "@material-ui/core/Icon";
+// import Icon from "@material-ui/core/Icon";
 import PhoneIcon from "@material-ui/icons/Phone";
 import DraftsOutlinedIcon from "@material-ui/icons/DraftsOutlined";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import Divider from "@material-ui/core/Divider";
+// import Divider from "@material-ui/core/Divider";
 import CheckOutlinedIcon from "@material-ui/icons/CheckOutlined";
 import { Carousel } from "react-bootstrap";
 
@@ -51,7 +51,9 @@ const styles = makeStyles((theme) => ({
     color: "#7A7A7A",
   },
   imgSlide:{
-    paddingTop :"50%"
+    paddingTop :"50%",
+    background: "black",
+    backgroundImage:'url(../../assets/img/background-soft.png)'
 
   },
 
@@ -106,53 +108,56 @@ export default function AboutPage() {
   const classes = styles();
   return (
     <section>
+      <div>
       <div className={classes.imgSlide}>
-      <Carousel>
-  <Carousel.Item>
-    <img
+      {/* <div className={classes.imgSlide}> */}
+      <Carousel >
+  <Carousel.Item style ={{backgroundImage:'url(../../assets/img/background-soft.png)'}}>
+    {/* <img
       className="d-block w-100"
-      src="./assets/img/bgwhite.png"
+      src="./img/slide6.png"
       alt="First slide"
-    />
+    /> */}
     <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      {/* <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="holder.js/800x400?text=Second slide&bg=282c34"
+      src="./img/slide1.png"
       alt="Second slide"
     />
 
     <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      {/* <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="holder.js/800x400?text=Third slide&bg=20232a"
+      src="./img/slide2.png"
       alt="Third slide"
     />
 
     <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      {/* <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
+</div>
+</div>
+
+
+      {/* </div> */}
 
 
 
-      </div>
 
-
-
-
-
+<div>
       <Container className={classes.root} fixed>
         <div className={classes.title}>
           <div
@@ -195,6 +200,7 @@ export default function AboutPage() {
           </div>
         </div>
       </Container>
+      </div>
 
       <div className={classes.content}>
         <Grid container spacing={3}>
@@ -233,7 +239,7 @@ export default function AboutPage() {
 
       <div className={classes.ourIntroductionContent}>
         <Grid container spacing={3}>
-          <Grid xs={6}>
+          <Grid item xs={6}>
             <div className={classes.title} style={{ fontSize: "36px" }}>
               {" "}
               Ngồi Tại Nhà - Đơn Hàng Có Chúng Tôi Lo!
@@ -270,7 +276,7 @@ export default function AboutPage() {
               </List>
             </div>
           </Grid>
-          <Grid xs={6}>
+          <Grid item xs={6}>
             <div
               className={classes.imgShipper}
               style={{ width: "100%", height: "100vh" }}

@@ -49,7 +49,7 @@ export default function Login() {
     color: '#13a549',
     letterSpacing: '2px'}}
           >LOGIN</Typography>
-          <form className={classes.form} Validate>
+          <form className={classes.form} validate = "true">
             <TextField
               variant="outlined"
               margin="normal"
@@ -140,7 +140,7 @@ export default function Login() {
               background: "#1da1f2",
               color: "white",
               borderRadius: "50px 50px",
-              margin: "8px 8px",
+              // margin: "8px 8px",
             }}
           >
             <Icon aria-label="twitter" style={{ color: "white" }}>
@@ -165,7 +165,7 @@ export default function Login() {
               icon={faGoogle}
               style={{
                 marginBottom: "6px",
-                margin: "2px 0px",
+                // margin: "2px 0px",
                 fontSize: "20px",
               }}
             />

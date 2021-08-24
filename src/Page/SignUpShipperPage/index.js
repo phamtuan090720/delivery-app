@@ -40,11 +40,11 @@ export default function index() {
             borderRadius: "30px",
           }}
         >
-          <Typography>
+          {/* <Typography> */}
             <h2 style={{ color: "#13a549", textAlign: "center" }}>
               Create Your Account
             </h2>
-          </Typography>
+          {/* </Typography> */}
           <Grid container spacing={1} style={{ padding: "4 4px" }}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -160,7 +160,7 @@ export default function index() {
                 style={{ display: "none" }}
               />
 
-              <Button variant="contained" color="#13a549" component="span">
+              <Button variant="contained" color="inherit" component="span">
                 Upload Your Avatar
               </Button>
 
@@ -173,7 +173,7 @@ export default function index() {
               />
               <label htmlFor="icon-button-file">
                 <IconButton
-                  color="#13a549"
+                  color="primary"
                   aria-label="upload picture"
                   component="span"
                 >
@@ -182,9 +182,9 @@ export default function index() {
               </label>
             </Grid>
 
-            <Grid item justifyContent="flex-end">
+            <Grid container justifyContent="flex-end">
               <FormControlLabel
-                control={<Checkbox value="allowExtraEmails" color="success" />}
+                control={<Checkbox value="allowExtraEmails" color="primary" />}
                 label="Accept the cookies"
               />
             </Grid>
