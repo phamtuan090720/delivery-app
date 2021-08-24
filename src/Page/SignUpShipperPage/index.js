@@ -1,44 +1,50 @@
 import React from "react";
-// import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
-// import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
-import { green } from "@material-ui/core/colors";
-import Icon from "@material-ui/core/Icon";
-import { Form } from "react-bootstrap";
+import { makeStyles } from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
+import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import PhotoCamera from "@material-ui/icons/PhotoCamera";
-import Image from "@material-ui/icons/Image";
-import { Typography } from "@material-ui/core";
+
+const s = makeStyles((theme) => ({
+  paper: {
+    marginTop: theme.spacing(8),
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+}));
 
 export default function index() {
+  const classes = s();
   return (
-    <div className="row">
-      <div
-        className="col-6"
-        style={{
-          borderRadius: "6%",
-          boxShadow: "0px 5px 25px 0px rgb(0 0 0 / 10%)",
-          padding: "35px 15px 35px 15px",
-        }}
+    <div
+      className="form-sign-up-shipper"
+  
+    >
+      <Container
+        className={classes.root}
+        fixed
+        style={{ display: "flex", width: "100%" }}
       >
-        <div
-            className="text-center"
-            // style={{
-            //   // marginBottom: "20px",
-            //   // marginTop: "60px",
-              // letterSpacing: "4px",
-            // }}
-          >
-            <h4 className="green-text">
-              <strong>Create Your Account</strong>
-            </h4>
-          </div>
-        <form style={{ padding: "20px 40px 20px 40px" }}>
+        <form
+          style={{
+            width: "50%",
+            float: "right",
+            padding: "0px 70px",
+            borderRadius: "30px",
+          }}
+        >
+          <Typography>
+            <h2 style={{ color: "#13a549", textAlign: "center" }}>
+              Create Your Account
+            </h2>
+          </Typography>
           <Grid container spacing={1} style={{ padding: "4 4px" }}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -50,8 +56,6 @@ export default function index() {
                 id="firstName"
                 label="First Name"
                 size="small"
-                defaultValue="Success"
-                
               />
             </Grid>
 
@@ -64,19 +68,6 @@ export default function index() {
                 label="Last Name"
                 name="lastName"
                 autoComplete="lname"
-                size="small"
-              />
-            </Grid>
-
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="identification "
-                label="Identification "
-                name="identification "
-                autoComplete="identification "
                 size="small"
               />
             </Grid>
@@ -111,6 +102,19 @@ export default function index() {
                 variant="outlined"
                 required
                 fullWidth
+                id="identification "
+                label="Identification "
+                name="identification "
+                autoComplete="identification "
+                size="small"
+              />
+            </Grid>
+
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
                 id="username"
                 label="Username"
                 name="lastName"
@@ -124,6 +128,7 @@ export default function index() {
                 variant="outlined"
                 required
                 fullWidth
+                type="password"
                 id="Password"
                 label="Password"
                 name="Password"
@@ -136,6 +141,7 @@ export default function index() {
                 variant="outlined"
                 required
                 fullWidth
+                type="password"
                 id="Confirm Password"
                 label="Confirm Password"
                 name="confirmpassword"
@@ -178,18 +184,17 @@ export default function index() {
 
             <Grid item justifyContent="flex-end">
               <FormControlLabel
-                control={<Checkbox value="allowExtraEmails" color="primary" />}
+                control={<Checkbox value="allowExtraEmails" color="success" />}
                 label="Accept the cookies"
               />
             </Grid>
           </Grid>
           <Button
-            className="xs-6 bg-success text-white"
+            className="text-white"
             type="submit"
             fullWidth
             variant="contained"
-            // color="primary"
-            style={{ marginBottom: "8px", borderRadius: "50px 50px 50px 50px" }}
+            style={{ marginBottom: "8px", background: "#13a549", color:"#fff" }}
           >
             Sign Up
           </Button>
@@ -205,27 +210,30 @@ export default function index() {
             </Grid>
           </Grid>
         </form>
-      </div>
 
-      <div className="col-6" style={{ width: "100%", padding: "40px 40px" }}>
-        <div
+        {/* <div
           className="header"
           style={{
+            width: "25%",
             padding: "40px 62px",
             boxShadow: "rgb(0 0 0 / 10%) 0px 5px 25px 0px",
           }}
         >
           <h1>Tìm Việc Làm Không Khó Đã Có Deliverra Lo!</h1>
-          <span>Trở Thành Một Shipper Giao Hàng Chuyên Nghiệp cùng chúng tôi</span>
+          <span>
+            Trở Thành Một Shipper Giao Hàng Chuyên Nghiệp cùng chúng tôi
+          </span>
         </div>
+
         <div
           className="Requirements"
           style={{
+            width: "25%",
             padding: " 72px 64px",
             boxShadow: "rgb(0 0 0 / 10%) 0px 5px 25px 0px",
           }}
         >
-          <h3>Yêu cầu</h3>
+          <h1>Yêu cầu</h1>
           <ul style={{ listStyleType: "none" }}>
             <li className="check-icon-items">
               <span
@@ -259,10 +267,9 @@ export default function index() {
                 Quan trọng nên có giấy phép lái xe nhé.
               </span>
             </li>
-          </ul>
-        </div>
-      </div>
-      {/* <div className="col-sm-4">hh</div> */}
+          </ul> */}
+        {/* </div> */}
+      </Container>
     </div>
   );
 }

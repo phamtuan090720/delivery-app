@@ -1,7 +1,3 @@
-/* *{
-  box-sizing: border-box;
-} */
-
 .App {
   text-align: center;
 }
@@ -40,21 +36,3 @@
     transform: rotate(360deg);
   }
 }
-.button.btn-block.z-depth-1a.white-text.font-weight-bold.btn.btn-primary {
-  background-color: #13a549 !important;
-}
-.btn-primary{
-  background-color: #4285f4;
-}
-.MuiOutlinedInput-input {
-  padding: 14.5px 10px;
-}
-/* div#root {
-  background: #1ac65a;
-}
-a {
-  color: white;
-  /* color: #007bff; */
-  /* text-decoration: none;
-  background-color: transparent;
-} */ 

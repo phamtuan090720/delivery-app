@@ -1,8 +1,8 @@
-import {Switch, BrowserRouter} from 'react-router-dom';
+import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import HomeTemplate from './Container/HomeTemplate';
 import { routesHome } from './Router';
+import PageNotFound from './Page/404/PageNotFound';
 
-import {Container} from "react-bootstrap";
 
 function App() {
   const showLayoutHome = (routes) => {
@@ -13,16 +13,12 @@ function App() {
     }
   }
   return (
-    <Container>
-      <BrowserRouter>
-        <Switch>
-          
-          {showLayoutHome(routesHome)}
-          {/* <Route path='/home' component={AboutPage} /> */}
-        </Switch>
-      </BrowserRouter>
-    </Container>
-    
+    <BrowserRouter>
+      <Switch>
+        {showLayoutHome(routesHome)}
+        <Route path='' component={PageNotFound} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
