@@ -2,6 +2,8 @@ import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import HomeTemplate from './Container/HomeTemplate';
 import { routesHome } from './Router';
 import PageNotFound from './Page/404/PageNotFound';
+
+
 function App() {
   const showLayoutHome = (routes) => {
     if (routes && routes.length > 0) {

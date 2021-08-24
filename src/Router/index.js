@@ -3,6 +3,7 @@ import Login from '../Page/LoginPage';
 import AboutPage from '../Page/AboutPage';
 import ContactPage from '../Page/ContactPage';
 import SignUpUser from '../Page/SignUpUserPage';
+import SignUpShipper from '../Page/SignUpShipperPage';
 const routesHome = [{
     exact: true,
     path: "/",
@@ -33,5 +34,12 @@ const routesHome = [{
     path: "/sign-up",
     component: SignUpUser,
 },
+
+{
+    exact: false,
+    path: "/SignUpShipper",
+    component: SignUpShipper,
+},
+
 ];
 export { routesHome };

@@ -4,6 +4,9 @@ import Styled from './HomePage.module.css';
 import Container from '@material-ui/core/Container';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import {Link} from 'react-router-dom'
+
+
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
@@ -62,7 +65,7 @@ export default function HomePage() {
     const classes = useStyles();
     return (
         <section className={Styled.wrap}>
-            <Container className={classes.root} fixed>
+            <Container className={classes.root} fixed style={{top:'0', left:'0,', right:'0'}}>
                 <div className={classes.getStart}>
                     <div className={classes.title}>Chúng Tôi Giao Hàng Nhanh Chóng Chỉ Với 30 phút</div>
                     <div className={classes.content}>Chúng tôi là Deliverra là web cung cấp dịch vụ giao hàng trực tuyến cho khách hàng</div>
@@ -71,7 +74,7 @@ export default function HomePage() {
                     </div>
                     <div className={classes.title}>Nếu Bạn Đang Cần Việc Làm ?</div>
                     <div className={classes.action}>
-                        <GetStartButton>Trở Thành Đối Tác Với Chúng Tôi <NavigateNextIcon/> </GetStartButton>
+                        <GetStartButton><Link to="/SignUpShipper" style={{color: 'white'}}>Trở Thành Đối Tác Với Chúng Tôi </Link><NavigateNextIcon/> </GetStartButton>
                     </div>
                 </div>
                 <div className={classes.imgShipper}>
