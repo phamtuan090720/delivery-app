@@ -1,16 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "bootstrap-css-only/css/bootstrap.min.css";
+import "mdbreact/dist/css/mdb.css";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from './Reudxs/configStore';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from '@material-ui/core';
 import theme from './theme/theme';
+import "./index.css";
+
+
+
+// import _ as EmailValidator from 'email-validator';
+
+// import _ as Yup from 'yup';
+
+
 ReactDOM.render(
   <Provider store={store}>
     <ThemeProvider theme={theme}>
       <App />
+      {/* <ValidateForm/> */}
     </ThemeProvider>
   </Provider>,
   document.getElementById('root')
