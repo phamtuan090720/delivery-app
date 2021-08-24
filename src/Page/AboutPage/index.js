@@ -5,7 +5,6 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
-// import { ClassSharp } from "@material-ui/icons";
 import HomeIcon from "@material-ui/icons/Home";
 // import Icon from "@material-ui/core/Icon";
 import PhoneIcon from "@material-ui/icons/Phone";
@@ -14,10 +13,9 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-// import Divider from "@material-ui/core/Divider";
 import CheckOutlinedIcon from "@material-ui/icons/CheckOutlined";
 import { Carousel } from "react-bootstrap";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const styles = makeStyles((theme) => ({
   root: {
@@ -25,13 +23,17 @@ const styles = makeStyles((theme) => ({
     position: "relative",
     overflowX: "hidden",
   },
+imgSlide:{
+display : "block",
+marginLeft: "auto",
+marginRight: "auto",
+backgroundColor: "#f6f6f6",
+width :"60%",
+                margin:"auto",
+                height:"auto"
+},
 
-  // videoAboutUs :{
-  //   // position: 'absolute',
-  //   width: "100%",
-  //   height: '100%',
 
-  // },
   title: {
     width: "100%",
     fontSize: 44,
@@ -49,12 +51,6 @@ const styles = makeStyles((theme) => ({
   },
   headingItemsColor: {
     color: "#7A7A7A",
-  },
-  imgSlide:{
-    paddingTop :"50%",
-    background: "black",
-    backgroundImage:'url(../../assets/img/background-soft.png)'
-
   },
 
   content: {
@@ -77,7 +73,6 @@ const styles = makeStyles((theme) => ({
     height: "100vh",
     padding: "36px 36px",
     textAlign: "center",
-
   },
   footer: {
     background: "#182430",
@@ -108,98 +103,120 @@ export default function AboutPage() {
   const classes = styles();
   return (
     <section>
-      <div>
-      <div className={classes.imgSlide}>
-      {/* <div className={classes.imgSlide}> */}
-      <Carousel >
-  <Carousel.Item style ={{backgroundImage:'url(../../assets/img/background-soft.png)'}}>
-    {/* <img
-      className="d-block w-100"
-      src="./img/slide6.png"
-      alt="First slide"
-    /> */}
-    <Carousel.Caption>
-      {/* <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="./img/slide1.png"
-      alt="Second slide"
-    />
-
-    <Carousel.Caption>
-      {/* <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="./img/slide2.png"
-      alt="Third slide"
-    />
-
-    <Carousel.Caption>
-      {/* <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
-    </Carousel.Caption>
-  </Carousel.Item>
-</Carousel>
-</div>
-</div>
-
-
-      {/* </div> */}
-
-
-
-
-<div>
-      <Container className={classes.root} fixed>
-        <div className={classes.title}>
-          <div
-            className="heading-title"
-            style={{ width: "50%", float: "right", marginBottom: "32px" }}
-          >
-            <Grid container spacing={3}>
-              <Grid
-                item
-                xs={12}
-                // sm={6}
-                className={classes.headingTitleItems}
-                style={{ marginTop: "24px" }}
-              >
-                <h2>Tầm Nhìn</h2>
-                <Typography className={classes.headingItemsColor}>
-                  {" "}
-                  Chúng tôi Deliverra không ngừng đổi mới, sáng tạo tạo sản phẩm
-                  dịch vụ tốt nhất, góp phần nâng cao chất lượng cuộc sống , gắn
-                  kết người với con người .
-                </Typography>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                // sm={6}
-                className={classes.headingTitleItems}
-                style={{ marginTop: "24px" }}
-              >
-                <h2>Nhiệm Vụ</h2>
-                <Typography className={classes.headingItemsColor}>
-                  Luôn cải tiến chất lượng sản phẩm đáp ứng nhu cầu của toàn
-                  khách hàng khi sử dụng dịch vụ của chúng tôi.
-                </Typography>
-              </Grid>
-            </Grid>
-          </div>
-          <div className={classes.imgMeet} style={{ height: "100%" }}>
-            <img src="../img/meet-800x914.png"></img>
-          </div>
+      <div style={{background:"#f6f6f6"}}>
+          <Carousel>
+            <Carousel.Item >
+              <img
+                className={classes.imgSlide}
+                src="./img/slide1.png"
+                
+                alt="First slide"
+              />
+              <Carousel.Caption>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className={classes.imgSlide}
+                src="./img/slide2.png"
+                alt="First slide"
+              />
+              <Carousel.Caption>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className={classes.imgSlide}
+                src="./img/slide3.png"
+                alt="First slide"
+              />
+              <Carousel.Caption>
+               
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className={classes.imgSlide}
+                src="./img/slide4.png"
+                width="100%"
+                height="auto"
+                alt="First slide"
+              />
+              <Carousel.Caption>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className={classes.imgSlide}
+                src="./img/slide6.png"
+                width="100%"
+                height="auto"
+                alt="First slide"
+              />
+              <Carousel.Caption>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
         </div>
-      </Container>
+    
+      <div>
+        <Container className={classes.root} fixed style={{marginTop:"28px"}}>
+          <div className={classes.title}>
+            <div
+              className="heading-title"
+              style={{ width: "50%", float: "right", marginBottom: "32px" }}
+            >
+              <Grid container spacing={3}>
+              <Grid
+                  item
+                  xs={12}
+                  // sm={6}
+                  className={classes.headingTitleItems}
+                  style={{ marginTop: "24px" }}
+                >
+                  <h2>Giá Trị Cốt Lõi</h2>
+                  <Typography className={classes.headingItemsColor}>
+                    Uy Tín - Tận Tâm - Trí Tuệ
+                  </Typography>
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  // sm={6}
+                  className={classes.headingTitleItems}
+                  style={{ marginTop: "24px" }}
+                >
+                  <h2>Tầm Nhìn</h2>
+                  <Typography className={classes.headingItemsColor}>
+                    {" "}
+                    Chúng tôi Deliverra không ngừng đổi mới, sáng tạo tạo sản
+                    phẩm dịch vụ tốt nhất, góp phần nâng cao chất lượng cuộc
+                    sống , gắn kết người với con người .
+                  </Typography>
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  // sm={6}
+                  className={classes.headingTitleItems}
+                  style={{ marginTop: "24px" }}
+                >
+                  <h2>Sứ mệnh</h2>
+                  <Typography className={classes.headingItemsColor}>
+                    Luôn cải tiến chất lượng sản phẩm đáp ứng nhu cầu của toàn
+                    khách hàng khi sử dụng dịch vụ của chúng tôi.
+                  </Typography>
+                </Grid>
+                
+
+
+              </Grid>
+            </div>
+            <div className={classes.imgMeet} style={{ height: "100%" }}>
+              <img src="../img/meet-800x914.png"></img>
+            </div>
+          </div>
+        </Container>
       </div>
 
       <div className={classes.content}>
